@@ -22,7 +22,10 @@ if x<e:
     elif "*" in a:
         xval=int(a[e+1::])/num
     else:
-        xval=int(a[e+1::])*num
+    	if not d.isalpha():
+    		xval=(1/int(a[e+1::]))*(num)
+    	else:
+    		xval=int(a[e+1::])*(num)
 else:
     if "+" in a:
         xval=int(d)+int(g)
